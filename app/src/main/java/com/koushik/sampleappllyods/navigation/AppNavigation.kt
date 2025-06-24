@@ -2,6 +2,7 @@ package com.koushik.sampleappllyods.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -14,7 +15,9 @@ import com.koushik.sampleappllyods.ui.screen.ItemListScreen
 import com.koushik.sampleappllyods.viewmodel.MainViewModel
 
 @Composable
-fun AppNavigation(navController: NavHostController, viewModel: MainViewModel) {
+fun AppNavigation(navController: NavHostController) {
+    val viewModel: MainViewModel = hiltViewModel()
+
     NavHost(
         navController = navController,
         startDestination = "item_list_screen"

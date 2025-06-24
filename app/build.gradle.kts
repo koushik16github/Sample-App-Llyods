@@ -64,6 +64,7 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.hilt.compiler)
 
     // Navigation component for Jetpack Compose
@@ -91,7 +92,4 @@ dependencies {
 
     // Hilt for testing
     testImplementation(libs.hilt.android.testing)
-
-    // Lifecycle Testing dependencies
-    testImplementation(libs.arch.core.testing)
 }

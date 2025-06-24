@@ -30,7 +30,4 @@ dependencies {
 
     // Coroutines for testing
     testImplementation(libs.coroutines.test)
-
-    // Lifecycle Testing dependencies
-    testImplementation(libs.arch.core.testing)
 }
