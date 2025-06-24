@@ -5,9 +5,8 @@ import com.koushik.domain.model.Item
 import com.koushik.domain.repository.ItemRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
-class GetItemsUseCase @Inject constructor(
+class GetItemsUseCase(
     private val repository: ItemRepository
 ) {
     operator fun invoke(): Flow<Result<List<Item>>> = flow {

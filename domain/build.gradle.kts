@@ -1,7 +1,6 @@
 plugins {
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
-    kotlin("kapt")
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_11
@@ -14,10 +13,6 @@ kotlin {
 }
 dependencies {
     implementation(project(":core"))
-
-    // Hilt
-    implementation(libs.hilt.core)
-    kapt(libs.hilt.compiler)
 
     // Coroutines
     implementation(libs.coroutines.core)
