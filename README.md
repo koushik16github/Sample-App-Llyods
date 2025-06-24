@@ -5,7 +5,6 @@ The app consists of two screens: one for displaying a list of news items fetched
 ## Folder Structure
 
 ### **App Module**
-- **di**: `AppModule` provides global dependencies.
 - **navigation**: Manages screen navigation (`AppNavigation`).
 - **ui.screen**: Screens for the app:
   - `MainActivity`: App entry point.
@@ -15,19 +14,17 @@ The app consists of two screens: one for displaying a list of news items fetched
 - **MyApplication**: Initializes the app.
 
 ### **Core Module**
-- **di**: `CoreModule` provides core dependencies.
 - **model**: Defines shared models (`Result`).
-- **util**: Common utilities (`Constants`, `NetworkHelper`).
+- **util**: Common utilities (`Constants`).
 
 ### **Data Module**
 - **api**: `ApiService` for API calls, `BaseResponse` for API responses.
-- **di**: `DataModule` and repository binding.
+- **di**: `NetworkModule`, `RepositoryModule` and repository binding.
 - **mapper**: Maps `ItemDto` to domain models.
 - **repository**: `NewsRepository` fetches news.
 - **util**: Handles network responses.
 
 ### **Domain Module**
-- **di**: `DomainModule` binds domain dependencies.
 - **model**: Defines domain model `Item`.
 - **repository**: `ItemRepository` for fetching data.
 - **usecase**: `GetItemsUseCase` to retrieve news.
